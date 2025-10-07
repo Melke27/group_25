@@ -7,7 +7,7 @@ const messageSchema = new mongoose.Schema({
   message: { type: String, required: true },
   status: { type: String, enum: ['unread', 'read'], default: 'unread' },
   createdAt: { type: Date, default: Date.now },
-  relatedBookingId: { type: mongoose.Schema.Types.ObjectId, ref: 'Booking' }
+  relatedBookingId: { type: mongoose.Schema.Types.ObjectId, ref: 'Booking' },
 });
 
 module.exports = mongoose.model('Message', messageSchema);
