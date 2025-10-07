@@ -13,7 +13,7 @@ const tourPackageSchema = new mongoose.Schema({
   category: { type: String, required: true },
   status: { type: String, enum: ['active', 'inactive'], default: 'active' },
   createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
+  updatedAt: { type: Date, default: Date.now },
 });
 
 module.exports = mongoose.model('TourPackage', tourPackageSchema);
